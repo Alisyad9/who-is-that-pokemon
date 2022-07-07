@@ -2,6 +2,11 @@
   text-align: center;
   background-color:yellowgreen
 }
+.ApiCall {
+  text-align: center;
+  background-color:crimson;
+}
+
 
 .App-logo {
   height: 40vmin;
