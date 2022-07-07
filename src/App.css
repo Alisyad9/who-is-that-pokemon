@@ -7,6 +7,12 @@
   background-color:crimson;
 }
 
+.border{
+  border:black 2px solid;
+  height:200px;
+  width:200px;
+
+}
 
 .App-logo {
   height: 40vmin;
