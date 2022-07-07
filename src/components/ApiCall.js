@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 
 // const ApiCall = () => {
 //   return (
@@ -8,28 +8,32 @@ import React from 'react';
 // }
 
 const ApiCall = () => {
-  const onSubmitHandler = (event) => {
+  const [pokemonImage, setPokemonImage] = useState('');
+
+  const randomNumber = Math.floor(Math.random() * 120 + 1);
+  const onSubmitHandler = async (event) => {
     event.preventDefault();
     try {
-      axios
-        .get({
-          method: 'get',
-          url: 'https://pokeapi.co/api/v2/pokemon/ditto',
-        })
-        .then((res) => {
-          console.log(res);
-        });
+      await axios({
+        method: 'get',
+        url: `https://pokeapi.co/api/v2/pokemon/${randomNumber}/`,
+      }).then((res) => {
+        console.log(res.data.sprites.front_default);
+        setPokemonImage(res.data.sprites.front_default);
+      });
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <div className="App">
+    <div>
       <form onSubmit={onSubmitHandler}>
         <button>click me</button>
-        <div>hey</div>
       </form>
+      <div>
+        <img src={pokemonImage}></img>
+      </div>
     </div>
   );
 };
