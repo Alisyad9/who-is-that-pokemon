@@ -5,19 +5,7 @@ import './App.css';
 import WelcomePage from './pages/welcomePage/WelcomePage';
 
 function App() {
-  return (
-    <div className="App">
-      {/* <WelcomePage /> */}
-      <nav
-        style={{
-          borderBottom: 'solid 1px',
-          paddingBottom: '1rem',
-        }}
-      >
-        <Link to="/WelcomePage">welcomePage</Link>
-      </nav>
-    </div>
-  );
+  return <div className="App">hey</div>;
 }
 
 export default App;
