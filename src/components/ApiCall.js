@@ -22,10 +22,6 @@ const ApiCall = () => {
     console.log(asyncResult);
   })();
 
-  // const randomName = Math.floor(Math.random() * array.length);
-  // console.log('array result', array);
-  // console.log('Random array name', array[randomName);
-
   const randomNumber1 = Math.floor(Math.random() * (50 - 1) + 1);
   const randomNumber2 = Math.floor(Math.random() * (100 - 51) + 51);
   const randomNumber3 = Math.floor(Math.random() * (150 - 101) + 101);
