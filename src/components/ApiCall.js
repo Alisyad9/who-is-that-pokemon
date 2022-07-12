@@ -9,9 +9,7 @@ const ApiCall = () => {
   const [fakeName2, setFakename2] = useState('');
   const [realName, setRealName] = useState('');
   const [isClicked, setIsClicked] = useState(false);
-  ////////////////////////////////
 
-  ////////////////////////////////
   let asyncResult;
   (async function () {
     const asyncFunctions = [fakePokemon1, fakePokemon2, onSubmitHandler];
