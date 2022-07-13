@@ -19,14 +19,3 @@ function App() {
 }
 
 export default App;
-
-//  <BrowserRouter>
-//       <Routes>
-//         <Route path="/" element={<WelcomePage />}>
-//           <Route index element={<Home />} />
-//           <Route path="blogs" element={<Blogs />} />
-//           <Route path="contact" element={<Contact />} />
-//           <Route path="*" element={<NoPage />} />
-//         </Route>
-//       </Routes>
-//     </BrowserRouter>
