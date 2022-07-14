@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { Route, IndexRoute } from 'react-router';
+
 import { Link } from 'react-router-dom';
 
 const ApiCall = () => {
@@ -80,19 +80,6 @@ const ApiCall = () => {
     .map(({ value }) => value);
   console.log(shuffled.map((value) => value === realName));
 
-  function arraySwap() {
-    return (
-      <div>
-        {shuffled.map((value) => (
-          <ul>
-            <li key={value}>
-              <button>{value}</button>
-            </li>
-          </ul>
-        ))}
-      </div>
-    );
-  }
   return (
     <div>
       <div className="border">
@@ -117,46 +104,13 @@ const ApiCall = () => {
           ))
         : ''}
 
-      {isClicked ? (
-        <div>
-          <Link to="/incorrect">
-            <button>{fakeName1}</button>
-            <button>{fakeName2}</button>
-          </Link>
-
-          <button onClick={onSubmitHandler}>{realName}</button>
-          {/* <button onClick={onSubmitHandler}>{arraySwap()}</button> */}
-        </div>
-      ) : (
+      {!isClicked && (
         <form onSubmit={onSubmitHandler}>
           <button>New game</button>
         </form>
       )}
-
-      {/* {shuffled.map((value) => (
-        <ul>
-          <li key={value}>
-            <button>{value}</button>
-          </li>
-        </ul>
-      ))} */}
-      <div>{arraySwap()}</div>
     </div>
   );
 };
 
 export default ApiCall;
-
-// li {
-//   border: 10px;
-//   color: red;
-//   margin: 5px;
-// }
-
-// ul.demo {
-//   list-style-type: none;
-//   border: 2px;
-//   margin: 3px;
-//   display: flex;
-//   flex-direction: row;
-// }
