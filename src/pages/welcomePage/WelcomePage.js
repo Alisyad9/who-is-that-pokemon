@@ -1,12 +1,12 @@
+import { Flex } from '@chakra-ui/react';
 import React from 'react';
 import ApiCall from '../../components/ApiCall';
 
 const WelcomePage = () => {
   return (
-    <div>
-      Welcome to the game
+    <Flex direction="row" justifyContent="center">
       <ApiCall />
-    </div>
+    </Flex>
   );
 };
 

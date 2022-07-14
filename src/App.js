@@ -3,19 +3,14 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './App.css';
 import WelcomePage from './pages/welcomePage/WelcomePage';
+import { Text } from '@chakra-ui/react';
 
 function App() {
-  let num1 = 1;
-  let num2 = 1;
-  console.log(num2 === num1);
-
-  function name(randomNumber1, randomNumber2) {
-    if (randomNumber1 === randomNumber2) {
-      console.log('true');
-    }
-  }
-  name(num2, num1);
-  return <div className="App">hey</div>;
+  return (
+    <Text textAlign="center" fontSize="50px" color="tomato">
+      I'm using a custom font-size value for this text
+    </Text>
+  );
 }
 
 export default App;
