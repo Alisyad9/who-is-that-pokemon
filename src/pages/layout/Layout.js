@@ -10,6 +10,10 @@ import {
   Button,
   useMediaQuery,
   IconButton,
+  useDisclosure,
+  Box,
+  ScaleFade,
+  Collapse,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
@@ -28,11 +32,8 @@ const Layout = () => {
   ///media query
   const [display, changeDisplay] = useState('none');
   const [isLargerThan900] = useMediaQuery('(min-width: 800px)');
+  const { isOpen, onToggle } = useDisclosure();
 
-  function clickHandler() {
-    console.log('hello world');
-    return <div>hey</div>;
-  }
   return (
     <>
       <nav>
@@ -42,6 +43,21 @@ const Layout = () => {
           align="center"
           mx={2}
         >
+          {/* <>
+            <Button onClick={onToggle}>Click Me</Button>
+            <Collapse in={isOpen} animateOpacity>
+              <Box
+                p="40px"
+                color="white"
+                mt="4"
+                bg="teal.500"
+                rounded="md"
+                shadow="md"
+              >
+                Fade
+              </Box>
+            </Collapse>
+          </> */}
           {isLargerThan900 ? (
             <Flex>
               <Link to="/">
@@ -66,7 +82,7 @@ const Layout = () => {
                 aria-label="Menu"
                 size="lg"
                 mr={2}
-                icon={<HamburgerIcon />}
+                icon={<HamburgerIcon color="blue.500" />}
                 onClick={() => {
                   changeDisplay('flex');
                 }}
@@ -90,7 +106,7 @@ const Layout = () => {
               {' '}
               <IconButton
                 margin="1rem"
-                colorScheme="messenger"
+                colorScheme="cyan"
                 aria-label="Close"
                 size="lg"
                 position="absolute"
