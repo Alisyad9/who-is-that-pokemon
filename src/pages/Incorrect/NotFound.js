@@ -14,7 +14,17 @@ import {
 } from '@chakra-ui/react';
 
 const NotFound = () => {
-  return <Flex justifyContent="center">Wrong pokemon try again </Flex>;
+  return (
+    <Flex
+      minH="100vh"
+      justifyContent="center"
+      backgroundImage={unknown}
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+    >
+      Wrong pokemon try again
+    </Flex>
+  );
 };
 
 export default NotFound;
