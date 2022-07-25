@@ -82,7 +82,7 @@ const ApiCall = () => {
       console.log(error);
     }
   };
-  ///////////
+
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     try {
