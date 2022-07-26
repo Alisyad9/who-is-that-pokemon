@@ -1,17 +1,7 @@
 import React from 'react';
 import unknown from '../../components/unknown.png';
 import modern from './modern.png';
-import {
-  Container,
-  Flex,
-  Box,
-  Image,
-  List,
-  FormControl,
-  Text,
-  Fade,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
 const NotFound = () => {
   return (
