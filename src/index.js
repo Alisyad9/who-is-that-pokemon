@@ -23,12 +23,3 @@ root.render(
     </BrowserRouter>
   </ChakraProvider>
 );
-
-{
-  /* <Route path="/" element={<App />}>
-<Route path="foo" element={<Foo />} />
-<Route path="bar" element={<Bar />} />
-<Route path="baz" element={<Baz />} />
-<Route path="blah" element={<Blah />} />
-</Route> */
-}
