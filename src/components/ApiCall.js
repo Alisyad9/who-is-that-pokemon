@@ -126,7 +126,6 @@ const ApiCall = () => {
       maxW="md"
     >
       <div>
-        {/* <img src={pokemonImage}></img> */}
         <Box maxW="sm" boxShadow="dark-lg" p="1" rounded="md">
           {' '}
           {!isClicked ? <Image src={unknown} /> : <Image src={pokemonImage} />}
