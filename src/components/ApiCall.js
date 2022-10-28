@@ -19,7 +19,6 @@ import {
 import { Link } from 'react-router-dom';
 
 const ApiCall = () => {
-  const { isOpen, onToggle } = useDisclosure();
   const [pokemonImage, setPokemonImage] = useState('');
   const [fakeName1, setFakename1] = useState('');
   const [fakeName2, setFakename2] = useState('');
